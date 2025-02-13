@@ -51,3 +51,21 @@ Makina lexoMakinen() {
     makina.lloji = static_cast<LlojiMakines>(lloji);
     return makina;
 }
+
+
+// Leximi dhe printimi i te dhenave te makinave nga tastiera
+void lexoDhePrintoMakinat() {
+    cout << "Shkruani te dhenat per makinen e pare:" << endl;
+    Makina makina1 = lexoMakinen();
+    cout << "Shkruani te dhenat per makinen e dyte:" << endl;
+    Makina makina2 = lexoMakinen();
+    cout << "Shkruani te dhenat per makinen e trete:" << endl;
+    Makina makina3 = lexoMakinen();
+
+    cout << "\n";
+    printoMakinen(makina1);;
+    cout << "\n";
+    printoMakinen(makina2);
+    cout << "\n";
+    printoMakinen(makina3);
+}
