@@ -15,8 +15,8 @@ struct Makina {
     int viti;
     LlojiMakines lloji;
 };
-// Funksion per te printuar informacionin e makines void printoMakinen (const Makina) {cout << "Marka: " << makina.marka <<endl; cout"Modeli: " << mode;}
- void printoMakinen(const Makina makina) {
+// Funksion per te printuar informacionin e makines 
+ void printoMakinen(const Makina& makina) {
     cout << "Marka: " << makina.marka << endl;
     cout << "Modeli: " << makina.modeli << endl;
     cout << "Viti: " << makina.viti << endl;
@@ -31,4 +31,23 @@ struct Makina {
         case LlojiMakines::Kamion:
             cout << "Kamion" << endl;
             break;
+            cout << "\n";
     }
+ }
+    
+
+    // Funksion per te lexuar te dhenat e makines nga tastiera
+Makina lexoMakinen() {
+    Makina makina;
+    int lloji;
+    cout << "Shkruani marken e makines: ";
+    cin >> makina.marka;
+    cout << "Shkruani modelin e makines: ";
+    cin >> makina.modeli;
+    cout << "Shkruani vitin e makines: ";
+    cin >> makina.viti;
+    cout << "Shkruani llojin e makines (0 per Sedan, 1 per SUV, 2 per Kamion): ";
+    cin >> lloji;
+    makina.lloji = static_cast<LlojiMakines>(lloji);
+    return makina;
+}
