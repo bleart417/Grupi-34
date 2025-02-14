@@ -15,6 +15,8 @@ struct Makina {
     int viti;
     LlojiMakines lloji;
 };
+
+
 // Funksion per te printuar informacionin e makines 
  void printoMakinen(const Makina& makina) {
     cout << "Marka: " << makina.marka << endl;
@@ -63,12 +65,14 @@ void lexoDhePrintoMakinat() {
     Makina makina3 = lexoMakinen();
 
     cout << "\n";
-    printoMakinen(makina1);;
+    printoMakinen(makina1);
     cout << "\n";
     printoMakinen(makina2);
     cout << "\n";
     printoMakinen(makina3);
 }
+
+// Funksioni main
 int main() {
     lexoDhePrintoMakinat();
     return 0;
