@@ -69,3 +69,7 @@ void lexoDhePrintoMakinat() {
     cout << "\n";
     printoMakinen(makina3);
 }
+int main() {
+    lexoDhePrintoMakinat();
+    return 0;
+}
